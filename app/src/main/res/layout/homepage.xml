@@ -20,67 +20,94 @@
 
     <ImageView
         android:id="@+id/imgnumbers"
-        android:layout_width="214dp"
-        android:layout_height="115dp"
+        android:layout_width="158dp"
+        android:layout_height="76dp"
         android:contentDescription="@android:string/ok"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621"
+        app:layout_constraintVertical_bias="0.62"
         app:srcCompat="@drawable/numbersbg" />
 
     <ImageView
         android:id="@+id/imgalphabets"
-        android:layout_width="176dp"
-        android:layout_height="105dp"
+        android:layout_width="113dp"
+        android:layout_height="122dp"
+
         android:contentDescription="@string/bottom_sheet_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/imgnumbers"
-        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintEnd_toEndOf="@+id/bghomepage"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.601"
-
+        app:layout_constraintVertical_bias="0.56"
         app:srcCompat="@drawable/alphabetbg" />
 
     <EditText
         android:id="@+id/textalphabets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="136dp"
+        android:layout_height="48dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:autofillHints=""
         android:backgroundTint="#8BC34A"
-        android:textStyle="bold"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="Alphabet Learning"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.273"
+        app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgalphabets"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/textnumbers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="458dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="162dp"
+        android:layout_height="60dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="Numbers learning"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bghomepage"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/bghomepage"
-        app:layout_constraintTop_toBottomOf="@+id/imgnumbers"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/textalphabets"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
+
+    <ImageView
+        android:id="@+id/imgrhymes"
+        android:layout_width="164dp"
+        android:layout_height="88dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.585"
+        app:srcCompat="@drawable/rhymesbg" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="130dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="339dp"
+        android:layout_marginEnd="259dp"
+        android:layout_marginBottom="100dp"
+        android:text="Rhyme Learning"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bghomepage"
+        app:layout_constraintEnd_toEndOf="@+id/bghomepage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bghomepage"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

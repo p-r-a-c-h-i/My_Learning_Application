@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -15,30 +16,91 @@ class Rhymes: AppCompatActivity(){
         val sheep = findViewById<ImageView>(R.id.sheep)
         val spider = findViewById<ImageView>(R.id.spider)
         val twinkle = findViewById<ImageView>(R.id.twinkle)
-
+        val stop = findViewById<Button>(R.id.stop)
+        val mpj=MediaPlayer.create(this, R.raw.johnny)
+        val mps = MediaPlayer.create(this, R.raw.sheep)
+        val spiderm = MediaPlayer.create(this, R.raw.spider)
+        val mpt = MediaPlayer.create(this, R.raw.twinkle)
         johnny.setOnClickListener {
-
-            val mp = MediaPlayer.create(this, R.raw.johnny)
-            mp.start()
+            if(mpj.isPlaying){
+                mpj.stop()
+            }
+            else if(mps.isPlaying){
+                mps.stop()
+            }
+            else if(spiderm.isPlaying){
+                spiderm.stop()
+            }
+            else if(mpt.isPlaying){
+                mpt.stop()
+            }
+            mpj.start()
         }
 
         sheep.setOnClickListener {
-
-            val mp = MediaPlayer.create(this, R.raw.sheep)
-            mp.start()
+            if(mpj.isPlaying){
+                mpj.stop()
+            }
+            else if(mps.isPlaying){
+                mps.stop()
+            }
+            else if(spiderm.isPlaying){
+                spiderm.stop()
+            }
+            else if(mpt.isPlaying){
+                mpt.stop()
+            }
+            mps.start()
         }
 
         spider.setOnClickListener {
-
-            val mp = MediaPlayer.create(this, R.raw.spider)
-            mp.start()
+            if(mpj.isPlaying){
+                mpj.stop()
+            }
+            else if(mps.isPlaying){
+                mps.stop()
+            }
+            else if(spiderm.isPlaying){
+                spiderm.stop()
+            }
+            else if(mpt.isPlaying){
+                mpt.stop()
+            }
+            spiderm.start()
         }
 
         twinkle.setOnClickListener {
+            if(mpj.isPlaying){
+                mpj.stop()
+            }
+            else if(mps.isPlaying){
+                mps.stop()
+            }
+            else if(spiderm.isPlaying){
+                spiderm.stop()
+            }
+            else if(mpt.isPlaying){
+                mpt.stop()
+            }
+            mpt.start()
+        }
 
-            val mp = MediaPlayer.create(this, R.raw.twinkle)
-            mp.start()
+        stop.setOnClickListener{
+            if(mpj.isPlaying){
+                mpj.stop()
+            }
+            else if(mps.isPlaying){
+                mps.stop()
+            }
+            else if(spiderm.isPlaying){
+                spiderm.stop()
+            }
+            else if(mpt.isPlaying){
+                mpt.stop()
+            }
         }
     }
+
+
 
 }

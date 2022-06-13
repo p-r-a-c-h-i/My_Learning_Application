@@ -16,12 +16,17 @@ class MainActivity : AppCompatActivity() {
 
        val a=findViewById<ImageView>(R.id.imgalphabets)
        val n=findViewById<ImageView>(R.id.imgnumbers)
+       val r=findViewById<ImageView>(R.id.imgrhymes)
         a.setOnClickListener{
             val intent= Intent(this,AlphabetActivity::class.java)
             this.startActivity(intent)
         }
         n.setOnClickListener{
             val intent= Intent(this,Numbers::class.java)
+            this.startActivity(intent)
+        }
+        r.setOnClickListener {
+            val intent=Intent(this,Rhymes::class.java)
             this.startActivity(intent)
         }
     }
